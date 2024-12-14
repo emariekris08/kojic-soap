@@ -1,0 +1,93 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Special Promotion for Kojic Soap - Get glowing skin with our Kojic Soap. Limited Time Offer!">
+    <meta name="keywords" content="Kojic Soap, Skin Lightening, Kojic Acid, Special Offer, Discount">
+    <title>Kojic Soap Promotion</title>
+    <link rel="stylesheet" href="promotion.css">
+</head>
+<body>
+<style>
+body{
+     background-image:url(none);
+     background-repeat:no-repeat;
+     background-attachment:fixed;
+     background-position:center;
+     background-size:cover;
+}
+h1{
+   background: linear-gradient(to right,skyblue,blue);
+   background-repeat:no-repeat;
+   background-attachment fixed;
+}
+h2{
+   background: linear-gradient(to right,skyblue,blue);
+   background-repeat:no-repeat;
+   background-attachment fixed;
+}
+p{
+   background: linear-gradient(to right,skyblue, white);
+   background-repeat:no-repeat;
+   background-attachment fixed;
+}
+</style>
+<header>
+    <h1>Limited Time Promotion: Kojic Soap</h1>
+</header>
+
+<div class="promotion-container">
+    <h2>Get Glowing Skin with Kojic Soap</h2>
+
+    <div class="promotion-details">
+        <p>Our Kojic Soap is packed with natural ingredients to brighten and even out your skin tone. Say goodbye to dark spots, acne scars, and uneven pigmentation!</p>
+        <p><strong>Special Offer: 25% Off</strong> on every purchase of Kojic Soap for a limited time only.</p>
+    </div>
+
+    <div class="discount">
+        <p>Get it now for only <strong>$11.24</strong> (original price: $14.99)</p>
+    </div>
+
+    <div class="countdown" id="countdown">
+        <!-- Countdown Timer will go here -->
+    </div>
+
+    <a href="https://www.example.com" class="buy-now-button">Buy Now</a>
+</div>
+
+<footer>
+    <p>&copy; 2024 Kojic Soap Shop. All rights reserved.</p>
+</footer>
+
+<script>
+    // Countdown timer logic
+    const endDate = new Date("Dec 31, 2024 23:59:59").getTime();
+
+    const countdown = setInterval(function() {
+        const now = new Date().getTime();
+        const distance = endDate - now;
+
+        // Calculate time components
+        const days = Math.floor(distance / (1000 * 60 * 60 * 24));
+        const hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        const minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
+        const seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
+        // Display the countdown
+        document.getElementById("countdown").innerHTML =
+            days + "d " + hours + "h " + minutes + "m " + seconds + "s ";
+
+        // If the countdown is over, display an expired message
+        if (distance < 0) {
+            clearInterval(countdown);
+            document.getElementById("countdown").innerHTML = "EXPIRED";
+        }
+    }, 1000);
+</script>
+<a href="index.html"><b>home</b></a>
+
+
+</body>
+</html>
